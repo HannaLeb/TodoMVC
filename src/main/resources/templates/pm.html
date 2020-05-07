@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoMVC</title>
+    <link rel="stylesheet" href="pm.css">
+    <script src="pm.js" defer></script>
+</head>
+
+<body>	
+    <section class="todoapp"> 
+        <header>    
+            <h1>todos</h1>
+            <input class="new-todo" placeholder="What needs to be done?" autofocus id="todoinput">
+		</header>
+        
+        <main>    
+            <input class="toggle-all" id="toggle-all" type="checkbox">
+            <label for="toggle-all">❯</label>
+            <ul class="todo-list" id="list"></ul>
+        </main>
+        
+        <footer>
+            <section>
+                <span class="number"><strong id="Items left">0</strong> items left</span>
+                <input id="showall" type="button" value="All">
+                <input id="hidecompleted" type="button" value="Active">
+                <input id="showcompleted" type="button" value="Completed">
+                <input id="clearcompleted" type="button" value="Clear completed">
+            </section>
+        </footer>
+    </section>
+	
+	<footer class="info">
+        <p>Double-click to edit a todo</p>
+        
+        <p>
+            Written by
+            <a href="länk till github">Hanna Lebeck</a>
+        </p>
+        
+        <p>
+            Part of
+            <a href="http://todomvc.com">TodoMVC</a>
+        </p>
+    </footer>
+</body>
+</html>
