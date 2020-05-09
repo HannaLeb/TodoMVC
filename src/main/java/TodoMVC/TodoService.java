@@ -16,7 +16,14 @@ public class TodoService {
         return repository.findAll();
     }
 
-    public List<Todo> saveAll(List<Todo> todos) {
+    public List<Todo> addTodos(List<Todo> todos) {
         return repository.saveAll(todos);
+        //repository.flush();
+        //return todos;
+    }
+
+    public void deleteTodo(Long id) {
+        repository.deleteById(id);
+        //repository.flush();
     }
 }

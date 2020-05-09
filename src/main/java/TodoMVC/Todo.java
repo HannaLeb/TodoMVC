@@ -7,16 +7,16 @@ public class Todo {
     public Todo() {
     }
 
-    public Todo(Integer id, String text) {
+    public Todo(Long id, String text) {
         this.id = id;
         this.text = text;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -31,7 +31,7 @@ public class Todo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Integer id;
+    private Long id;
 
     @Column(name = "text", nullable = false)
     private String text;

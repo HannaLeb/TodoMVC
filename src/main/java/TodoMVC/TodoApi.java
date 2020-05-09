@@ -22,9 +22,14 @@ public class TodoApi {
         return ResponseEntity.ok(service.findAll());
     }
 
-    @PostMapping
-    public ResponseEntity saveAll(@Valid @RequestBody List<Todo> todos) {
-        return ResponseEntity.ok(service.saveAll(todos));
+    @PostMapping("/add")
+    public ResponseEntity addTodos(@Valid @RequestBody List<Todo> todos){
+        return ResponseEntity.ok(service.addTodos(todos));
     }
 
+    @PostMapping("/delete")
+    public ResponseEntity deleteTodo(Long id) {
+        service.deleteTodo(id);
+        return ResponseEntity.ok("deleted");
+    }
 }
