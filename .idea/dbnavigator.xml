@@ -23,11 +23,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="false" />
-    <loaded-nodes>
-      <connection connection-id="b1d1e80a-966d-424f-8be9-53be4d54f50b">
-        <schema name="todomvc" object-types="dataset trigger, table, view, function, procedure, constraint, index, column" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="b1d1e80a-966d-424f-8be9-53be4d54f50b">

@@ -18,12 +18,22 @@ public class TodoService {
 
     public List<Todo> addTodos(List<Todo> todos) {
         return repository.saveAll(todos);
-        //repository.flush();
-        //return todos;
     }
 
     public void deleteTodo(Long id) {
         repository.deleteById(id);
-        //repository.flush();
+
     }
+
+    public List<Todo> findCompleted() {
+        return repository.findByCompleted(true);
+    }
+
+    public List<Todo> findActive() {
+        return repository.findByCompleted(false);
+    }
+
+    public void clearCompleted() { repository.deleteByCompleted(true); }
+        //List<Todo> todos = repository.findByCompleted(true);
+        //repository.delete(todos);
 }

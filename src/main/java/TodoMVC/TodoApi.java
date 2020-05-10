@@ -17,7 +17,7 @@ public class TodoApi {
         this.service = stockService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<Todo>> findAll() {
         return ResponseEntity.ok(service.findAll());
     }
@@ -31,5 +31,21 @@ public class TodoApi {
     public ResponseEntity deleteTodo(Long id) {
         service.deleteTodo(id);
         return ResponseEntity.ok("deleted");
+    }
+
+    @GetMapping("/completed")
+    public ResponseEntity<List<Todo>> findCompleted() {
+        return ResponseEntity.ok(service.findCompleted());
+    }
+
+    @GetMapping("/active")
+    public ResponseEntity<List<Todo>> findActive() {
+        return ResponseEntity.ok(service.findActive());
+    }
+
+    @PostMapping("/clear-completed")
+    public ResponseEntity clearCompleted() {
+        service.clearCompleted();
+        return ResponseEntity.ok("cleared");
     }
 }
