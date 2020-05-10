@@ -34,6 +34,5 @@ public class TodoService {
     }
 
     public void clearCompleted() { repository.deleteByCompleted(true); }
-        //List<Todo> todos = repository.findByCompleted(true);
-        //repository.delete(todos);
+
 }
